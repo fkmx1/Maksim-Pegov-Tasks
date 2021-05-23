@@ -4,13 +4,38 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cteate Account</title>
+    <title>Create Account</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="content">
-        <div class="form"></div>
+        <div class="form">
+            <span class="nameForm">Create Account</span>
+            <div class="iconDiv">
+                <img src="img/google.svg" alt="google" class="icon">
+                <img src="img/facebook.png" alt="facebook" class="icon">
+                <img src="img/twitter.svg" alt="twitter" class="icon">
+                <img src="img/vk.png" alt="vk" class="icon">
+            </div>
+            <p class="legendRegistration">or use your email for registration:</p>
+            <form class="formElems">
+                <input style="font-family: FontAwesome;" type = "text" placeholder = "&#xf573 Name" class="elem"><br>
+                <input style="font-family: FontAwesome;" type = "email" placeholder = "&#xf199 Email" class="elem"><br>
+                <input style="font-family: FontAwesome;" type = "password" placeholder = "&#xf084 Password" class="elem"><br>
+                <input type="checkbox" class="custom-checkbox" id="agree">
+                <label for="agree">&nbsp;I agree to the&nbsp;<span class="agreeCreateAccount">Terms</span>&nbsp;and&nbsp;<span class="agreeCreateAccount">Privacy Policy</span>.</label><br>
+                <input type="radio" class="custom-radio" id="freeRadioInput" name="statusAccount">
+                <label for="freeRadioInput">Start for Free</label><br>
+                <input type="radio" class="custom-radio" id="proRadioInput" name="statusAccount">
+                <label for="proRadioInput">Get more with Pro</label><br>
+                <input type="button" class="singUp" value="Sign Up">
+                <input type="button" class="signIn" value="Sign In">
+            </form>
+        </div>
         <div class="picture"></div>
     </div>
+    <script src="https://kit.fontawesome.com/1086a6334b.js" crossorigin="anonymous"></script>
 </body>
 </html>
