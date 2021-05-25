@@ -10,29 +10,37 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="content">
-        <div class="form">
-            <span class="nameForm">Create Account</span>
-            <div class="iconDiv">
-                <img src="img/google.svg" alt="google" class="icon">
-                <img src="img/facebook.png" alt="facebook" class="icon">
-                <img src="img/twitter.svg" alt="twitter" class="icon">
-                <img src="img/vk.png" alt="vk" class="icon">
+    <div class="page">
+        <div class="content">
+            <div class="form">
+                <span class="span-create-account">Create Account</span>
+                <div>
+                    <i class="fab fa-google"></i>
+                    <i class="fab fa-facebook-f"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-vk"></i>
+                </div>
+                <p class="legend-registration">or use your email for registration:</p>
+                <form class="form-elems-registration">
+                    <input type = "text" placeholder = "&#xf573 Name" class="elem-form-registration">
+                    <input type = "email" placeholder = "&#xf199 Email" class="elem-form-registration">
+                    <input type = "password" placeholder = "&#xf084 Password" class="elem-form-registration">
+                    <div class="checkbox">
+                        <input type="checkbox" class="checkbox__input" id="checkbox-agree">
+                        <label for="checkbox-agree" class="checkbox__label"><span>I agree to the <span> Terms </span>and<span> Privacy Policy</span>.</span></label>
+                    </div>
+                    <div class="radio">
+                        <input type="radio" class="radio__input" id="free-radio-input" name="status-account">
+                        <label for="free-radio-input" class="radio__label">Start for Free</label>
+                    </div>
+                    <div class="radio">
+                        <input type="radio" class="radio__input" id="pro-radio-input" name="status-account">
+                        <label for="pro-radio-input" class="radio__label">Get more with Pro</label>
+                    </div>
+                    <button class="button-sing-up">Sign Up</button>
+                    <button class="button-sign-in">Sign In</button>
+                </form>
             </div>
-            <p class="legendRegistration">or use your email for registration:</p>
-            <form class="formElems">
-                <input style="font-family: FontAwesome;" type = "text" placeholder = "&#xf573 Name" class="elem"><br>
-                <input style="font-family: FontAwesome;" type = "email" placeholder = "&#xf199 Email" class="elem"><br>
-                <input style="font-family: FontAwesome;" type = "password" placeholder = "&#xf084 Password" class="elem"><br>
-                <input type="checkbox" class="custom-checkbox" id="agree">
-                <label for="agree">&nbsp;I agree to the&nbsp;<span class="agreeCreateAccount">Terms</span>&nbsp;and&nbsp;<span class="agreeCreateAccount">Privacy Policy</span>.</label><br>
-                <input type="radio" class="custom-radio" id="freeRadioInput" name="statusAccount">
-                <label for="freeRadioInput">Start for Free</label><br>
-                <input type="radio" class="custom-radio" id="proRadioInput" name="statusAccount">
-                <label for="proRadioInput">Get more with Pro</label><br>
-                <input type="button" class="singUp" value="Sign Up">
-                <input type="button" class="signIn" value="Sign In">
-            </form>
         </div>
         <div class="picture"></div>
     </div>

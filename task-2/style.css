@@ -13,178 +13,221 @@ body {
     padding: 0;  
 }
 
-.content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
-.form {
+.page {
+    margin: 145px auto;
+    width: 1311px;
+    height: 943px;
     background-color: rgb(255, 255, 255);
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.26);
+    border-radius: 10px;
+}
+.content {
+    float: left;
     width: 755px;
     height: 943px;
-    position: relative;
+    border: 1px;
 }
-
+.form {
+    text-align: center;
+    margin: 40px auto 0;
+    width: 70%;
+}
 .picture {
-    background-image: url(img/girls.jpg); 
+    float: left;
+    background-image: url("img/girls.jpg"); 
     background-size:cover;
     background-position: 25%;
     width: 556px;
     height: 943px;
-}
-
-.nameForm {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 48px;
-    position: absolute;
-    color:#fd5353;
-    top: 117px;
-    left: 200px;
-}
-
-.icon {
-    border-radius: 100%; /* Радиус скругления */
-    border: 2px solid black; /* Параметры рамки */
-    width: 20px;
-    padding: 10px;
-    margin: 10px;
-
-}
-.iconDiv {
-    position: absolute;
-    top: 217px;
-    left: 260px;
-}
-.legendRegistration {
-    font-family: 'Gimbal';
-    font-size: 20px;
-    position: absolute;
-    left: 240px;
-    top: 310px;
-    color: #21343b;
-}
-
-.formElems {
-    position: absolute;
-    left: 140px;
-    top: 370px;
-}
-
-.elem {
-    width: 475px;
-    height: 60px;
-    border: 1px solid #c6d9df;
-    margin-top: 20px;
-    background-color:#f7f8f9;
+    border: 1px;
     border-radius: 10px;
 }
 
-input.elem::placeholder {
-    color: #c6d9df;
-    font-size: 1.25rem;
+.span-create-account {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 48px;
+    color:#fd5353;
 }
 
-/* стили для скрытия стандартного элемента input */
-.custom-checkbox {
-    position: absolute;
-    z-index: -1;
-    opacity: 0;
+.fab {
+    border-radius: 100%;
+    border: 1px solid black;
+    padding: 10px;
+    margin: 25px 10px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
 }
 
-/* поддельный чекбокс */
-.custom-checkbox+label {
-    display: inline-flex;
-    align-items: center;
-    user-select: none;
+.legend-registration, .checkbox__label{
     font-family: 'Gimbal';
     font-size: 20px;
-    margin-top: 25px;
-
-}
-.custom-checkbox+label::before {
-    content: '';
-    display: inline-block;
-    width: 1.25rem;
-    height: 1.25rem;
-    flex-shrink: 0;
-    flex-grow: 0;
-    border: 1px solid #adb5bd;
-    border-radius: 0.25em;
-    margin-right: 0.5em;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: 50% 50%;
+    color: #21343b;
 }
 
-/* стили при нахождении элемента в состоянии checked */
-.custom-checkbox:checked+label::before {
-    border-color: #fd5353;
+.elem-form-registration {
+    margin-bottom: 25px;
+    width: 100%;
+    height: 60px;
+    border: 1px solid #c6d9df;
+    background-color:#f7f8f9;
+    border-radius: 10px;
+    font-size:1.25rem;
+    cursor: pointer;
+}
+
+input.elem-form-registration::placeholder {
+    color: #c6d9df;
+    font-size: 1.25rem;
+    font-family: FontAwesome;
+    padding-left: 10px;
+}
+
+.checkbox {
+    position: relative;
+    text-align: left;
+    padding-left: 25px;
+}
+.checkbox__input, .radio__input {
+    appearance: none;
+    position: absolute;
+}
+
+.checkbox__label {
+    padding-left: 25px;
+    cursor: pointer;
+}
+
+.checkbox__label:before {
+    content: "";
+    display: block;
+    width: 24px;
+    height: 24px;
+
+    border: 1px solid #fd5353;
+    background-color: #fff;
+    border-radius: 5px;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+
+    transition: all 0.5s;
+}
+.checkbox__label:after {
+    content: "";
+    display: block;
+    width: 24px;
+    height: 24px;
+
+    background: url("img/check.png") no-repeat;
+    background-size: 16px 16px;
+    opacity: 0;
+
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    z-index: 2;
+
+    transition: all 0.5s;
+}
+
+.checkbox__input:checked + .checkbox__label:before {
     background-color: #fd5353;
-    background-image: url("img/check.png");
 }
 
-.agreeCreateAccount {
+.checkbox__input:checked + .checkbox__label:after {
+    opacity: 1;
+}
+.radio {
+    position: relative;
+    text-align: left;
+    margin-top: 25px;
+    padding-left: 25px;
+}
+.radio__label {
+    padding-left: 25px;
+    
+    cursor: pointer;
+    font-family: 'Gimbal';
+    font-size: 20px;
+    color: #21343b;
+}
+.radio__label:before {
+    content: "";
+    display: block;
+    width: 24px;
+    height: 24px;
+
+    border: 1px solid #fd5353;
+    background-color: #fff;
+    border-radius: 50%;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+
+    transition: all 0.5s;
+}
+
+.radio__label:after {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 20px;
+
+    background-color: #fd5353;
+    border-radius: 50%;
+    opacity: 0;
+
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    z-index: 2;
+
+    transition: all 0.5s;
+}
+
+.radio__input:checked + .radio__label:before {
+    border-color: #fd5353;
+}
+
+.radio__input:checked + .radio__label:after {
+    opacity: 1;
+}
+
+.form-elems-registration label span span {
     color: #fd5353;
 }
-
-.singUp, .signIn {
+.button-sing-up, .button-sign-in {
     margin: 35px 5px;
     border: 1px solid #fd5353;
     border-radius: 10px;
     padding: 15px 60px;
-    font-family: 'Open Sans', sans-serif;
     display: inline-block;
     font-size: 20px;
     width: 225px;
+    cursor: pointer;
+    font-weight: 700;
 }
 
-.singUp {
+.button-sing-up {
     color: rgb(255, 255, 255);
     background-color: #fd5353;
-    font-weight: 100;
 }
 
-.signIn {
+.button-sign-in {
+    color:#fd5353;
+    background-color: rgb(255, 255, 255);
+} 
+
+.button-sing-up:hover {
     color:#fd5353;
     background-color: rgb(255, 255, 255);
 }
-
-/* для элемента input c type="radio" */
-.custom-radio {
-    position: absolute;
-    z-index: -1;
-    opacity: 0;
-}
-  /* для элемента label связанного с .custom-radio */
-.custom-radio+label {
-    display: inline-flex;
-    align-items: center;
-    user-select: none;
-    font-family: 'Gimbal';
-    font-size: 20px;
-    margin-top: 25px;
-    margin-left: 150px;
-}
-
-  /* создание в label псевдоэлемента  before со следующими стилями */
-.custom-radio+label::before {
-    content: '';
-    display: inline-block;
-    width: 1.5rem;
-    height: 1.5rem;
-    flex-shrink: 0;
-    flex-grow: 0;
-    border: 1px solid #adb5bd;
-    border-radius: 50%;
-    margin-right: 0.5em;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: 50% 50%;
-}
-
-  /* стили для радиокнопки, находящейся в состоянии checked */
-.custom-radio:checked+label::before {
-    border-color: #fd5353;
+.button-sign-in:hover {
+    color: rgb(255, 255, 255);
     background-color: #fd5353;
 }
