@@ -1,0 +1,231 @@
+body {
+    box-sizing: border-box;
+    background-color: rgb(231, 231, 231);
+    margin: 0;
+    padding: 0;  
+}
+
+.page {
+    margin: 145px auto;
+    width: 1311px;
+    height: 943px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.26);
+    border-radius: 10px;
+    display: flex;
+}
+.content {
+    width: 755px;
+    height: 943px;
+    border: 1px;
+    display: inline-block;
+}
+.form {
+    margin: 40px auto 0;
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.picture {
+    background-image: url("img/girls.jpg"); 
+    background-size:cover;
+    background-position: 25%;
+    width: 556px;
+    height: 943px;
+    border: 1px;
+    border-radius: 10px;
+}
+
+.span-create-account {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 48px;
+    color:#fd5353;
+}
+
+i.fab {
+    border-radius: 100%;
+    border: 1px solid black;
+    
+    padding: 5px;
+    margin: 25px 5px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer; 
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.legend-registration, .checkbox__label{
+    font-family: 'Gimbal';
+    font-size: 20px;
+    color: #21343b;
+}
+
+.elem-form-registration {
+    margin-bottom: 25px;
+    width: 100%;
+    height: 60px;
+    border: 1px solid #c6d9df;
+    background-color:#f7f8f9;
+    outline: none;
+    border-radius: 10px;
+    font-size:20px;
+    cursor: pointer;
+    padding-left: 10px;
+}
+
+input.elem-form-registration::placeholder {
+    color: #c6d9df;
+    font-size: 20px;
+    font-family: FontAwesome;
+}
+
+.checkbox {
+    position: relative;
+    text-align: left;
+    padding-left: 25px;
+}
+.checkbox__input, .radio__input {
+    appearance: none;
+    position: absolute;
+}
+
+.checkbox__label {
+    padding-left: 25px;
+    cursor: pointer;
+}
+
+.checkbox__label:before {
+    content: "";
+    display: block;
+    width: 24px;
+    height: 24px;
+
+    border: 1px solid #fd5353;
+    background-color: #fff;
+    border-radius: 5px;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+
+    transition: all 0.5s;
+}
+.checkbox__label:after {
+    content: "";
+    display: block;
+    width: 24px;
+    height: 24px;
+
+    background: url("img/check.png") no-repeat;
+    background-size: 16px 16px;
+    opacity: 0;
+
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    z-index: 2;
+
+    transition: all 0.5s;
+}
+
+.checkbox__input:checked + .checkbox__label:before {
+    background-color: #fd5353;
+}
+
+.checkbox__input:checked + .checkbox__label:after {
+    opacity: 1;
+}
+.radio {
+    position: relative;
+    margin: 25px;
+    padding-left: 25px;
+}
+.radio__label {
+    padding-left: 10px;
+    cursor: pointer;
+    font-family: 'Gimbal';
+    font-size: 20px;
+    color: #21343b;
+}
+.radio__label:before {
+    content: "";
+    display: block;
+    width: 24px;
+    height: 24px;
+
+    border: 1px solid #fd5353;
+    background-color: #fff;
+    border-radius: 50%;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+
+    transition: all 0.5s;
+}
+
+.radio__label:after {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 20px;
+
+    background-color: #fd5353;
+    border-radius: 50%;
+    opacity: 0;
+
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    z-index: 2;
+
+    transition: all 0.5s;
+}
+
+.radio__input:checked + .radio__label:before {
+    border-color: #fd5353;
+}
+
+.radio__input:checked + .radio__label:after {
+    opacity: 1;
+}
+
+.form-elems-registration label span span {
+    color: #fd5353;
+}
+.button-sing-up, .button-sign-in {
+    margin: 35px 5px;
+    border: 1px solid #fd5353;
+    border-radius: 10px;
+    padding: 15px 60px;
+    display: inline-block;
+    font-size: 20px;
+    width: 225px;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+.button-sing-up {
+    color: rgb(255, 255, 255);
+    background-color: #fd5353;
+}
+
+.button-sign-in {
+    color:#fd5353;
+    background-color: rgb(255, 255, 255);
+} 
+
+.button-sing-up:hover {
+    color:#fd5353;
+    background-color: rgb(255, 255, 255);
+}
+.button-sign-in:hover {
+    color: rgb(255, 255, 255);
+    background-color: #fd5353;
+}
