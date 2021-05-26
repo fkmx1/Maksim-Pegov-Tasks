@@ -1,0 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap');
+
+@font-face {
+	font-family: 'Gimbal';
+	src: url('fonts/GeneralGrotesque-Regular.eot');
+	src: local('☺'), url('fonts/GeneralGrotesque-Regular.woff') format('woff'), url('fonts/GeneralGrotesque-Regular.ttf') format('truetype'), url('fonts/GeneralGrotesque-Regular.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
