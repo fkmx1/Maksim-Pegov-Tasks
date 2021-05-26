@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap');
+
 @font-face {
 	font-family: 'Gimbal';
 	src: url('fonts/GeneralGrotesque-Regular.eot');
@@ -20,12 +22,13 @@ body {
     background-color: rgb(255, 255, 255);
     box-shadow: 0 0 50px rgba(0, 0, 0, 0.26);
     border-radius: 10px;
+    display: flex;
 }
 .content {
-    float: left;
     width: 755px;
     height: 943px;
     border: 1px;
+    display: inline-block;
 }
 .form {
     text-align: center;
@@ -33,7 +36,6 @@ body {
     width: 70%;
 }
 .picture {
-    float: left;
     background-image: url("img/girls.jpg"); 
     background-size:cover;
     background-position: 25%;
@@ -71,16 +73,17 @@ body {
     height: 60px;
     border: 1px solid #c6d9df;
     background-color:#f7f8f9;
+    outline: none;
     border-radius: 10px;
     font-size:1.25rem;
     cursor: pointer;
+    padding-left: 10px;
 }
 
 input.elem-form-registration::placeholder {
     color: #c6d9df;
     font-size: 1.25rem;
     font-family: FontAwesome;
-    padding-left: 10px;
 }
 
 .checkbox {
@@ -145,10 +148,12 @@ input.elem-form-registration::placeholder {
     text-align: left;
     margin-top: 25px;
     padding-left: 25px;
+
+    display: inline-block;
+    margin: 50px 10px 25px;
 }
 .radio__label {
-    padding-left: 25px;
-    
+    padding-left: 10px;
     cursor: pointer;
     font-family: 'Gimbal';
     font-size: 20px;
